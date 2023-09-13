@@ -36,7 +36,7 @@ function AuthProvider({ children }) {
       .then(() => {
         setLoadingAuth(false);
         toast.success("Check your email");
-        navigate("/newpassword");
+        navigate("/");
       })
       .catch((error) => {
         console.log(error);
