@@ -4,6 +4,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
+  sendPasswordResetEmail,
 } from "firebase/auth";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
@@ -28,6 +29,23 @@ function AuthProvider({ children }) {
     }
     loadUser();
   }, []);
+
+  async function forgotPassword(email) {
+    setLoadingAuth(true);
+    await sendPasswordResetEmail(auth, email)
+      .then(() => {
+        setLoadingAuth(false);
+        toast.success("Check your email");
+        navigate("/newpassword");
+      })
+      .catch((error) => {
+        console.log(error);
+        setLoadingAuth(false);
+        toast.error("Error sending email");
+      });
+  }
+
+
 
   async function signIn(email, password) {
     setLoadingAuth(true);
@@ -103,6 +121,7 @@ function AuthProvider({ children }) {
         signIn,
         signUp,
         logout,
+        forgotPassword,
         loadingAuth,
         loading
       }}

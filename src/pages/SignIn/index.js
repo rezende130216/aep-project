@@ -35,6 +35,7 @@ export default function SignIn() {
 
           <input type="password" placeholder="Password:"  value={password}
           onChange={(e) => setPassword(e.target.value)}/>
+          <Link className='forgot' to="/forgot">Forgot your password?</Link>
 
         <button type='submit'>{loadingAuth ? 'Loading...' : 'Login'}</button>
 
