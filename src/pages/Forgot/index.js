@@ -1,5 +1,4 @@
 import { useState, useContext } from "react";
-import "./forgot.css";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo01.png";
 import { AuthContext } from "../../contexts/auth";
