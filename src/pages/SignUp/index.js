@@ -1,4 +1,4 @@
-import logo from "../../assets/logo01.png";
+import logo from "../../assets/logo.jpg";
 import { useState,useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from "../../contexts/auth";

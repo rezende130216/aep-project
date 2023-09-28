@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo01.png";
+import logo from "../../assets/logo.jpg";
 import { AuthContext } from "../../contexts/auth";
 
 export default function Forgot() {

@@ -1,6 +1,6 @@
 import { useState,useContext } from 'react';
 import { Link } from 'react-router-dom';
-import logo01 from '../../assets/logo01.png';
+import logo01 from '../../assets/logo.jpg';
 import { AuthContext } from '../../contexts/auth';
 import { toast } from "react-toastify";
 
@@ -28,7 +28,7 @@ export default function SignIn() {
          <img src={logo01} alt="Logo do sistema" />
         </div>
         <form onSubmit={handleSignIn}>
-          <h1>Login</h1>
+          <h1>LOGIN</h1>
           <input type="text" placeholder="E-mail:" value={email} 
           onChange={(e) => setEmail(e.target.value)}/>
 
