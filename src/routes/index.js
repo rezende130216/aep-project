@@ -3,6 +3,7 @@ import SignUp from '../pages/SignUp';
 import SignIn from '../pages/SignIn';
 import Dashboard from '../pages/Dashboard';
 import Forgot from '../pages/Forgot';
+import Profile from '../pages/Profile';
 
 import Private from './Private';
 
@@ -13,6 +14,7 @@ function AppRoutes() {
       <Route path="/signup" element={<SignUp />} />
       <Route path="/forgot" element={<Forgot />} />
       <Route path="/dashboard" element={<Private><Dashboard /></Private>} />
+      <Route path="/profile" element={<Private><Profile /></Private>} />
     </Routes>
   );
 }
