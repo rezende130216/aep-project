@@ -93,14 +93,12 @@ export default function Profile() {
               {avatarUrl && avatarUrl !== "" ? (
                 <img
                   src={avatarUrl}
-                  alt="Profile"
                   width={200}
                   height={200}
                 />
               ) : (
                 <img
                   src={avatar}
-                  alt="Profile"
                   width={200}
                   height={200}
                 />
