@@ -15,7 +15,7 @@ export default function Profile() {
   const [avatarUrl, setAvatar] = useState(user && user.avatarUrl);
   const [imageAvatar, setImageAvatar] = useState(null);
   const [name, setName] = useState(user && user.name);
-  const [email, setEmail] = useState(user && user.email);
+  const [email] = useState(user && user.email);
 
   function handleFile(e) {
     if (e.target.files[0]) {
@@ -33,7 +33,8 @@ export default function Profile() {
   async function handleUpload() {
     const currentUid = user.uid;
     const uploadRef = ref(storage, `images/${currentUid}/${imageAvatar.name}`);
-    const uploadTask = uploadBytes(uploadRef, imageAvatar).then((snapshot) => {
+    const uploadTask = uploadBytes(uploadRef, imageAvatar);
+    uploadTask.then((snapshot) => {
       getDownloadURL(snapshot.ref).then(async (downloadURL) => {
         let url = downloadURL;
         const docRef = doc(db, "users", user.uid);
