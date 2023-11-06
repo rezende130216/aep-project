@@ -4,11 +4,11 @@ import { FiSettings, FiUpload } from "react-icons/fi";
 import avatar from "../../assets/unicesumar.png";
 import { AuthContext } from "../../contexts/auth";
 import { useContext, useState } from "react";
-import "./profile.css";
 import { doc, updateDoc } from "firebase/firestore";
 import { db, storage } from "../../services/Banco/firebaseConnection";
 import { toast } from "react-toastify";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import "./profile.css";
 
 export default function Profile() {
   const { user, storageUser, setUser, logout } = useContext(AuthContext);

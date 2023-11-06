@@ -12,7 +12,7 @@ export default function Header() {
             <div>
                 <img src={user.avatarUrl === null ? logo : user.avatarUrl} alt="photo user" />
             </div>
-            <Link to="/dashboard">
+            <Link to="/prompts">
                 <FiHome color="#FFF" size={24} />
                 Prompts
             </Link>
