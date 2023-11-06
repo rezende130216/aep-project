@@ -95,7 +95,7 @@ export default function Profile() {
                   src={avatarUrl}
                   width={200}
                   height={200}
-                  alt="Avatar"
+                  alt="AvatarUrl"
                 />
               ) : (
                 <img
