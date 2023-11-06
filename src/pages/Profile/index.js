@@ -90,18 +90,7 @@ export default function Profile() {
               </span>
               <input type="file" accept="image/*" onChange={handleFile} />
               <br />
-              {avatarUrl && avatarUrl !== "" ? (
-                <img
-                  src={avatarUrl}
-                  width={200}
-                  height={200}
-                />
-              ) : (
-                <img
-                  src={avatar}
-                  width={200}
-                  height={200}
-                />
+              {avatarUrl === "" ? ( <img src={avatarUrl} width={200} height={200} /> ) : (<img src={avatar} width={200} height={200} />
               )}
             </label>
             <label>Nome:</label>
