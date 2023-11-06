@@ -95,14 +95,12 @@ export default function Profile() {
                   src={avatarUrl}
                   width={200}
                   height={200}
-                  alt="User Avatar"
                 />
               ) : (
                 <img
                   src={avatar}
                   width={200}
                   height={200}
-                  alt="Default Avatar"
                 />
               )}
             </label>
