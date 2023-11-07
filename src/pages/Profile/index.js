@@ -1,7 +1,6 @@
 import Title from "../../components/Title";
 import Header from "../../components/Header";
 import { FiSettings, FiUpload } from "react-icons/fi";
-import Avatar from "../../assets/unicesumar.png";
 import { AuthContext } from "../../contexts/auth";
 import { useContext, useState } from "react";
 import { doc, updateDoc } from "firebase/firestore";
