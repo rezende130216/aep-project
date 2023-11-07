@@ -1,6 +1,7 @@
 import Title from "../../components/Title";
 import Header from "../../components/Header";
 import { FiSettings, FiUpload } from "react-icons/fi";
+import logo from '../../assets/logo.jpg'
 import { AuthContext } from "../../contexts/auth";
 import { useContext, useState } from "react";
 import { doc, updateDoc } from "firebase/firestore";
@@ -89,7 +90,7 @@ export default function Profile() {
               </span>
               <input type="file" accept="image/*" onChange={handleFile} />
               <br />
-              
+              <img src={avatarUrl || logo} alt={user.name || "User Avatar"} />
             </label>
             <label>Nome:</label>
             <input
