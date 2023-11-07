@@ -90,7 +90,7 @@ export default function Profile() {
               </span>
               <input type="file" accept="image/*" onChange={handleFile} />
               <br />
-              <img src={avatarUrl || logo} alt={user.name || "User Avatar"} />
+              <img src={avatarUrl || logo} alt={user.name ? `Avatar de ${user.name}` : "Avatar"} />
             </label>
             <label>Nome:</label>
             <input
