@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/auth";
 import { FiHome, FiUser, FiFlag } from "react-icons/fi";
 import "./header.css";
+import { useState } from "react";
 
 export default function Header() {
   const { user } = useContext(AuthContext);
+  const [avatarUrl, setAvatar] = useState(user && user.avatarUrl);
   return (
     <div className="sidebar">
       <div>
