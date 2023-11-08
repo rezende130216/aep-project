@@ -8,7 +8,7 @@ import { useState } from "react";
 
 export default function Header() {
   const { user } = useContext(AuthContext);
-  const [avatarUrl, setAvatar] = useState(user && user.avatarUrl);
+  const [avatarUrl] = useState(user && user.avatarUrl);
   return (
     <div className="sidebar">
       <div>
